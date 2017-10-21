@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  nav.navbar.navbar-dark.bg-dark.text-center
+    a.navbar-brand(href="#") Online School fees payment solution
+  .jumbotron(style="padding: 15px; margin-top: 3%; margin-left: 10%; margin-right: 10%;")
+    form(action='create', method="POST")
+      .form-group
+        lable Student number
+        input.form-control(type="text", name="studentNumber")
+        small.form-text.text-muted Enter your student number
+      .form-group
+        lable Amount to pay
+        input.form-control(type="text", name="amount")
+        small.form-text.text-muted enter the amount to  be paid above
+      .form-group
+        lable Phone number
+        input.form-control(type="text", name="phoneNumber")
+        small.form-text.text-muted Enter your phone number
+
+      button.btn.btn-primary(type='submit') Send payment
